@@ -4,4 +4,4 @@ RUN mkdir /tmp/build
 
 ADD . /tmp/build
 
-CMD cd /tmp/build; mvn install; cat /tmp/build/target/*.jar
+CMD cd /tmp/build; mvn install 2>&1 > /dev/null; cd /tmp/build/target; tar -czf - gs-spring-boot-0.1.0.jar
