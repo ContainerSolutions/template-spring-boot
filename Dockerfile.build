@@ -4,4 +4,4 @@ RUN mkdir /tmp/build
 
 ADD . /tmp/build
 
-CMD cd /tmp/build; mvn install; mv /tmp/build/target/*.jar /tmp/output/; exit
+CMD cd /tmp/build; mvn install; cat /tmp/build/target/*.jar
