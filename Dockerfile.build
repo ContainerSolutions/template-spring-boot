@@ -1,0 +1,7 @@
+FROM maven:3.2.5-jdk-8
+
+RUN mkdir /tmp/build
+
+ADD . /tmp/build
+
+CMD cd /tmp/build; mvn install; mv /tmp/build/target/*.jar /tmp/output/; exit
